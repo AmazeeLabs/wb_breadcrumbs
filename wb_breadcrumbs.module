@@ -1,0 +1,33 @@
+<?php
+/**
+ * @file
+ * Hook implementations for WB Breadcrumbs module.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function wb_breadcrumbs_help($route_name) {
+  switch ($route_name) {
+    case 'wb_breadcrumbs.config':
+      $output = '';
+      $output .= '<h3>' . t('WB Breadcrumbs') . '</h3>';
+      $output .= '<p>' . t('Drupal 8 menu based breadcrumbs');
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function wb_breadcrumbs_theme() {
+  return [
+    'wb_breadcrumb' => [
+      'variables' => [
+        'breadcrumb' => NULL,
+        'separator' => NULL,
+        'main_class' => NULL
+      ],
+    ],
+  ];
+}

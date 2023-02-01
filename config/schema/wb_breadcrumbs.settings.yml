@@ -1,0 +1,16 @@
+wb_breadcrumbs.settings:
+  type: mapping
+  label: 'WeebDo breadcrumbs module settings'
+  mapping:
+    breadcrumb_menu:
+      type: string
+      label: 'Menu name'
+    breadcrumb_separator:
+      type: string
+      label: 'Breadcrumb separator'
+    main_class:
+      type: string
+      label: 'Main class for Breadcrumb'
+    disable_front_page_link:
+      type: boolean
+      label: 'Hide front page link'
